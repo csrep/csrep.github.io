@@ -2,7 +2,7 @@
  
 source "https://rubygems.org"
 
-ruby "3.4.0"   
+# ruby "3.4.0"   
 
 gem "eventmachine", "~> 1.2", require: false, platform: :ruby
 
