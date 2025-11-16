@@ -19,7 +19,7 @@ Your message will remain <b>private and confidential</b>.
   <input type="hidden" name="_subject" value="New CS Department Grievance">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://ashokacsdept.github.io/thanks/">
+  <input type="hidden" name="_next" value="https://csrep.github.io/thanks/">
 
   <fieldset class="form-section">
     <legend>About You (optional)</legend>
@@ -45,30 +45,36 @@ Your message will remain <b>private and confidential</b>.
     <textarea id="message" name="message" rows="6" required class="form-control" placeholder="Please share what happened or what you'd like us to know...">
     </textarea>
   </fieldset>
+<fieldset class="form-section">
+  <legend>Preferred Action for Your Concern</legend>
+  <p class="note">
+    This helps us understand how you would like your grievance or concern to be addressed. 
+    Please select the option that best reflects your preference.
+  </p>
 
-  <fieldset class="form-section">
-    <legend>What would you like us to do?</legend>
-    <p class="note">This helps us understand how you want your concern handled.</p>
+  <label class="radio-option">
+    <input type="radio" name="action_preference" value="Just to Share" checked>
+    Just to share – I want someone to acknowledge my concern.
+  </label>
 
-    <label class="radio-option">
-      <input type="radio" name="action_preference" value="Just to share" checked>
-      Just to share - I just want someone to know.
-    </label>
-
-    <label class="radio-option">
-      <input type="radio" name="action_preference" value="Seek support or resolution">
-      I’d like support or help resolving this. 
-    </label>
-
-    <label class="radio-option">
-      <input type="radio" name="action_preference" value="Active moderation or action">
-      I’d like this to be actively moderated or acted upon.
-    </label>
-
-    <span style="font-size:14px;color:#969e9e">
-    Please leave us a way to get back to you in case you want us to act on your grievance in any way
+  <label class="radio-option">
+    <input type="radio" name="action_preference" value="Seek Support or Resolution">
+    Seek support or resolution – I would like assistance in addressing this concern. 
+    <span style="display:block; font-size: 0.85rem; color: #555; margin-left: 1.5rem; margin-top: 0.2rem;">
+      For example, I may need accommodation, guidance, or informal help. 
     </span>
-  </fieldset>
+  </label>
+
+  <label class="radio-option">
+    <input type="radio" name="action_preference" value="Moderation or Action">
+    Active moderation or action – I wish to formally raise this with a committee or designated authority.
+  </label>
+
+  <p class="note" style="font-size: 0.85rem; color: #969e9e; margin-top: 0.5rem;">
+    If you wish for us to follow up with you, please provide a contact method below so we can respond appropriately.
+  </p>
+</fieldset>
+
 
   <fieldset class="form-section">
     <legend>Additional Notes (optional)</legend>
@@ -168,6 +174,15 @@ textarea.form-control {
   margin-top: 0.6rem;
 }
 
+input:focus,
+textarea:focus, .form-control:focus {
+  background-color: #2a2a2a;  /* Dark background when active */
+  color: #f2f2f2;             /* Light text for contrast */
+  border-color: #555;          /* Darker border for emphasis */
+  outline: none;               /* Remove default outline */
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
 /* ---------------- LIGHT MODE ---------------- */
 html[data-mode="light"] .grievance-form {
   background: #f9f9fb;
@@ -200,4 +215,16 @@ html[data-mode="light"] .submit-btn {
 html[data-mode="light"] .submit-btn:hover {
   background-color: #444;
 }
+
+html[data-mode="light"] input:focus,
+textarea:focus, .form-control:focus {
+  background-color: #fff;      /* Light background by default */
+  color: #222;                 /* Text color */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
 </style>

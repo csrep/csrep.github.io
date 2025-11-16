@@ -3,52 +3,102 @@ layout: default
 ---
 
 {% include lang.html %}
-
 <div class="quick-links container my-4">
   <h2 class="h5 mb-3">Quick Links</h2>
   <div class="row g-3">
     <div class="col-6 col-md-3">
-      <a href="/faqs" class="btn btn-outline-primary w-100">FAQs</a>
+      <a href="/faqs" class="quick-link">FAQs</a>
     </div>
     <div class="col-6 col-md-3">
-      <a href="/whatsapp-groups" class="btn btn-outline-primary w-100"
-        >WhatsApp Groups</a
-      >
-    </div>
-
-    <div class="col-6 col-md-3">
-      <a href="/grievance" class="btn btn-outline-primary w-100"
-        >Grievance Form</a
-      >
+      <a href="/whatsapp-groups" class="quick-link">WhatsApp Groups</a>
     </div>
     <div class="col-6 col-md-3">
-      <a href="/trajectories" class="btn btn-outline-primary w-100"
-        >Trajectory Samples</a
-      >
+      <a href="/grievance" class="quick-link">Grievance Form</a>
     </div>
     <div class="col-6 col-md-3">
-      <a href="/resources" class="btn btn-outline-primary w-100">Resources</a>
-    </div>
-    <!--
-    <div class="col-6 col-md-3">
-      <a href="/categories" class="btn btn-outline-primary w-100"
-        >Search by Categories</a
-      >
+      <a href="/trajectories" class="quick-link">Trajectory Samples</a>
     </div>
     <div class="col-6 col-md-3">
-      <a href="/tags" class="btn btn-outline-primary w-100">Search by Tags</a>
+      <a href="/resources" class="quick-link">Resources</a>
     </div>
-
-    <div class="col-6 col-md-3">
-      <a href="/help" class="btn btn-outline-primary w-100">Help</a>
-    </div>
-    -->
   </div>
 </div>
 
 <div class="notice-box">
-  This site is open for public commits.
+  <strong>Notice:</strong> This site is open for public commits. Feel free to contribute, explore, or share resources. Reach out to cs.rep@ashoka.edu.in for more.
 </div>
+
+<style>
+/* Quick Links as simple cards */
+.quick-link {
+  display: block;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #0078d7;
+  text-align: center;
+  color: #0078d7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: #f8f9fa;
+}
+
+.quick-link:hover {
+  background-color: #0078d7;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Notice box */
+.notice-box {
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------------- DARK MODE ---------------- */
+html:not([data-mode="light"]) .quick-link {
+  background-color: #2a2a2a;
+  border-color: #339af0;
+  color: #339af0;
+}
+
+html:not([data-mode="light"]) .quick-link:hover {
+  background-color: #339af0;
+  color: #fff;
+}
+
+html:not([data-mode="light"]) .notice-box {
+  background-color: #4a3f2f;
+  border-color: #6b5841;
+  color: #f5e8c7;
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+html[data-mode="light"] .quick-link {
+  background-color: #f8f9fa;
+  border-color: #0078d7;
+  color: #0078d7;
+}
+
+html[data-mode="light"] .quick-link:hover {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+html[data-mode="light"] .notice-box {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+</style>
+
 
 
 {% assign all_pinned = site.posts | where: 'pin', 'true' %} {% assign all_normal

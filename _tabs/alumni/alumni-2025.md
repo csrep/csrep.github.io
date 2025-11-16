@@ -1,7 +1,7 @@
 ---
 layout: alumni-year
-title: "Batch of 2025"
-batch_year: "2025"
-permalink: /alumni/2025/
+title: "UG2021-2025"
+batch_year: "UG2021-2025"
+permalink: /alumni/UG2021-2025/
 visible: false
 ---
