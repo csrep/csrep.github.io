@@ -6,8 +6,8 @@ title: Capstone Projects & Theses
 {% include lang.html %}
 
 {% assign projects = site.projects | where_exp: 'item', 'item.hidden != true' | sort: 'date' | reverse %}
-
 <style>
+
 /* --- Projects & Theses Layout Styles --- */
 
 #project-list {
@@ -96,6 +96,81 @@ title: Capstone Projects & Theses
   margin: 3rem 0;
   font-size: 1rem;
 }
+
+/* ---------------- DARK MODE (DEFAULT) ---------------- */
+
+html:not([data-mode="light"]) .project-card {
+  background: #1f1f1f;
+  border-color: #444;
+  color: #e6e6e6;
+}
+
+html:not([data-mode="light"]) .project-title {
+  color: #f0f0f0;
+}
+
+html:not([data-mode="light"]) .project-title a {
+  color: #f0f0f0;
+}
+
+html:not([data-mode="light"]) .project-title a:hover {
+  color: #74a9ff;
+}
+
+html:not([data-mode="light"]) .project-meta,
+html:not([data-mode="light"]) .project-advisor,
+html:not([data-mode="light"]) .project-students,
+html:not([data-mode="light"]) .project-abstract {
+  color: #ccc;
+}
+
+html:not([data-mode="light"]) .project-categories span {
+  background: #2a2a2a;
+  color: #bbb;
+}
+
+html:not([data-mode="light"]) .project-card:hover {
+  border-color: #74a9ff;
+  box-shadow: 0 3px 10px rgba(255,255,255,0.05);
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+
+html[data-mode="light"] .project-card {
+  background: #fff;
+  border-color: #ddd;
+  color: #222;
+}
+
+html[data-mode="light"] .project-title {
+  color: #222;
+}
+
+html[data-mode="light"] .project-title a {
+  color: #222;
+}
+
+html[data-mode="light"] .project-title a:hover {
+  color: #0078d7;
+}
+
+html[data-mode="light"] .project-meta,
+html[data-mode="light"] .project-advisor,
+html[data-mode="light"] .project-students,
+html[data-mode="light"] .project-abstract {
+  color: #555;
+}
+
+html[data-mode="light"] .project-categories span {
+  background: #f7f7f7;
+  color: #666;
+}
+
+html[data-mode="light"] .project-card:hover {
+  border-color: #0078d7;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
 </style>
 
 

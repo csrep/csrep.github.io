@@ -34,15 +34,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Why pursue this certification? This certification helps students bridge the gap between software development and cloud infrastructure. As more companies migrate to the cloud, Azure Developers are in high demand across industries." />
 <meta property="og:description" content="Why pursue this certification? This certification helps students bridge the gap between software development and cloud infrastructure. As more companies migrate to the cloud, Azure Developers are in high demand across industries." />
-<link rel="canonical" href="https://csrep.github.io/certifications/azure-developer/" />
-<meta property="og:url" content="https://csrep.github.io/certifications/azure-developer/" />
+<link rel="canonical" href="http://localhost:4000/certifications/azure-developer/" />
+<meta property="og:url" content="http://localhost:4000/certifications/azure-developer/" />
 <meta property="og:site_name" content="CS@Ashoka" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-11-17T01:48:03+05:30" />
+<meta property="article:published_time" content="2025-11-17T02:25:47+05:30" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Microsoft Certified: Azure Developer Associate" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-17T01:48:03+05:30","datePublished":"2025-11-17T01:48:03+05:30","description":"Why pursue this certification? This certification helps students bridge the gap between software development and cloud infrastructure. As more companies migrate to the cloud, Azure Developers are in high demand across industries.","headline":"Microsoft Certified: Azure Developer Associate","mainEntityOfPage":{"@type":"WebPage","@id":"https://csrep.github.io/certifications/azure-developer/"},"url":"https://csrep.github.io/certifications/azure-developer/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-17T02:25:47+05:30","datePublished":"2025-11-17T02:25:47+05:30","description":"Why pursue this certification? This certification helps students bridge the gap between software development and cloud infrastructure. As more companies migrate to the cloud, Azure Developers are in high demand across industries.","headline":"Microsoft Certified: Azure Developer Associate","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/certifications/azure-developer/"},"url":"http://localhost:4000/certifications/azure-developer/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -637,15 +637,17 @@
 
   </div>
 </article>
-
 <style>
 /* --- Certification Detail Page Styles --- */
 
 .certification-article {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1.5rem 1.75rem;
+  padding: 1.5rem 3.75rem;
+  padding-left: 1.5rem;
   border-radius: 0.75rem;
+  /* background: var(--bs-body-bg, #fff); */
+  /* box-shadow: 0 3px 8px rgba(0,0,0,0.04); */
 }
 
 .certification-title {
@@ -684,19 +686,84 @@
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
+  color: var(--bs-body-color, #222);
 }
 
 .cert-section p {
   font-size: 0.95rem;
   line-height: 1.55;
+  color: var(--bs-body-color, #333);
 }
 
 .cert-content {
   margin-top: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  color: var(--bs-body-color, #333);
+}
+
+/* ---------------- DARK MODE ---------------- */
+
+
+html:not([data-mode="light"]) .certification-title {
+  color: #f0f0f0;
+}
+
+html:not([data-mode="light"]) .cert-meta {
+  color: #bbb;
+}
+
+html:not([data-mode="light"]) .cert-meta i {
+  color: #aaa;
+}
+
+html:not([data-mode="light"]) .cert-field {
+  color: #ccc;
+}
+
+html:not([data-mode="light"]) .cert-section h3 {
+  color: #e6e6e6;
+}
+
+html:not([data-mode="light"]) .cert-section p,
+html:not([data-mode="light"]) .cert-content {
+  color: #d0d0d0;
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+
+html[data-mode="light"] .certification-article {
+  background: #fff;
+  /* border-color: #ddd; */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+
+html[data-mode="light"] .certification-title {
+  color: #222;
+}
+
+html[data-mode="light"] .cert-meta {
+  color: #666;
+}
+
+html[data-mode="light"] .cert-meta i {
+  color: #888;
+}
+
+html[data-mode="light"] .cert-field {
+  color: #333;
+}
+
+html[data-mode="light"] .cert-section h3 {
+  color: #222;
+}
+
+html[data-mode="light"] .cert-section p,
+html[data-mode="light"] .cert-content {
+  color: #333;
 }
 </style>
+
 
             
           </main>

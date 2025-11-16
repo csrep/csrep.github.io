@@ -3,8 +3,9 @@ layout: default
 ---
 
 {% include lang.html %}
-
 <style>
+/* ---------------- BASE STYLES ---------------- */
+
 .back-button {
   margin: 1rem 0;
 }
@@ -14,14 +15,14 @@ layout: default
   align-items: center;
   gap: 0.4rem;
   font-size: 0.9rem;
-  /* color: var(--bs-link-color, #0078d7); */
   text-decoration: none;
   transition: color 0.2s;
+  color: var(--bs-link-color, #4da3ff);
 }
 
 .back-button a:hover {
-  /* color: var(--bs-link-hover-color, #005fa3); */
   text-decoration: underline;
+  color: var(--bs-link-hover-color, #70b5ff);
 }
 
 .back-button svg {
@@ -60,16 +61,80 @@ layout: default
   font-size: 1.6rem;
   font-weight: 700;
   margin-top: 0.8rem;
+  text-align: center;
   color: var(--bs-body-color, #111);
-    text-align: center;
 }
 
 article .content {
   margin-top: 1.5rem;
   font-size: 1rem;
   line-height: 1.7;
+  color: var(--bs-body-color, #222);
+}
+
+/* ---------------- DARK MODE (DEFAULT) ---------------- */
+
+html:not([data-mode="light"]) .back-button a {
+  color: #9dc9ff;
+}
+
+html:not([data-mode="light"]) .back-button a:hover {
+  color: #c0dbff;
+}
+
+html:not([data-mode="light"]) .opportunity-meta {
+  color: #bbb;
+}
+
+html:not([data-mode="light"]) .opportunity-meta i {
+  color: #aaa;
+}
+
+html:not([data-mode="light"]) .opportunity-categories span {
+  background: #2b2b2b;
+  color: #ccc;
+}
+
+html:not([data-mode="light"]) .dynamic-title {
+  color: #f0f0f0;
+}
+
+html:not([data-mode="light"]) article .content {
+  color: #d2d2d2;
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+
+html[data-mode="light"] .back-button a {
+  color: #0078d7;
+}
+
+html[data-mode="light"] .back-button a:hover {
+  color: #005fa3;
+}
+
+html[data-mode="light"] .opportunity-meta {
+  color: #666;
+}
+
+html[data-mode="light"] .opportunity-meta i {
+  color: #888;
+}
+
+html[data-mode="light"] .opportunity-categories span {
+  background: #f5f5f5;
+  color: #555;
+}
+
+html[data-mode="light"] .dynamic-title {
+  color: #111;
+}
+
+html[data-mode="light"] article .content {
+  color: #222;
 }
 </style>
+
 
 <div class="back-button">
   <a href="{{ '/opportunities' | relative_url }}">

@@ -5,7 +5,6 @@ layout: custom-general
 {% include lang.html %}
 
 {% assign certifications = site.certifications | where_exp: 'item', 'item.hidden != true' | sort: 'date' | reverse %}
-
 <style>
 /* --- Certifications Layout Styles --- */
 
@@ -85,6 +84,83 @@ layout: custom-general
   margin: 3rem 0;
   font-size: 1rem;
 }
+
+
+/* ---------------- DARK MODE (DEFAULT) ---------------- */
+
+html:not([data-mode="light"]) .cert-card {
+  background: #1f1f1f;
+  border-color: #444;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+html:not([data-mode="light"]) .cert-title {
+  color: #f0f0f0;
+}
+
+html:not([data-mode="light"]) .cert-title a:hover {
+  color: #4da3ff;
+}
+
+html:not([data-mode="light"]) .cert-meta {
+  color: #bbb;
+}
+
+html:not([data-mode="light"]) .cert-meta i {
+  color: #aaa;
+}
+
+html:not([data-mode="light"]) .cert-desc {
+  color: #cfcfcf;
+}
+
+html:not([data-mode="light"]) .cert-categories span {
+  background: #2a2a2a;
+  color: #ccc;
+}
+
+html:not([data-mode="light"]) .no-certifications {
+  color: #aaa;
+}
+
+
+/* ---------------- LIGHT MODE ---------------- */
+
+html[data-mode="light"] .cert-card {
+  background: #fff;
+  border-color: #ddd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+html[data-mode="light"] .cert-title {
+  color: #222;
+}
+
+html[data-mode="light"] .cert-title a:hover {
+  color: #0078d7;
+}
+
+html[data-mode="light"] .cert-meta {
+  color: #666;
+}
+
+html[data-mode="light"] .cert-meta i {
+  color: #888;
+}
+
+html[data-mode="light"] .cert-desc {
+  color: #555;
+}
+
+html[data-mode="light"] .cert-categories span {
+  background: #f5f5f5;
+  color: #666;
+}
+
+html[data-mode="light"] .no-certifications {
+  color: #888;
+}
+
 </style>
 
 <div id="certification-list">

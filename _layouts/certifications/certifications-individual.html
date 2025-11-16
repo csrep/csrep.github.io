@@ -65,15 +65,17 @@ layout: default
     {{ content }}
   </div>
 </article>
-
 <style>
 /* --- Certification Detail Page Styles --- */
 
 .certification-article {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1.5rem 1.75rem;
+  padding: 1.5rem 3.75rem;
+  padding-left: 1.5rem;
   border-radius: 0.75rem;
+  /* background: var(--bs-body-bg, #fff); */
+  /* box-shadow: 0 3px 8px rgba(0,0,0,0.04); */
 }
 
 .certification-title {
@@ -112,16 +114,80 @@ layout: default
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
+  color: var(--bs-body-color, #222);
 }
 
 .cert-section p {
   font-size: 0.95rem;
   line-height: 1.55;
+  color: var(--bs-body-color, #333);
 }
 
 .cert-content {
   margin-top: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  color: var(--bs-body-color, #333);
+}
+
+/* ---------------- DARK MODE ---------------- */
+
+
+html:not([data-mode="light"]) .certification-title {
+  color: #f0f0f0;
+}
+
+html:not([data-mode="light"]) .cert-meta {
+  color: #bbb;
+}
+
+html:not([data-mode="light"]) .cert-meta i {
+  color: #aaa;
+}
+
+html:not([data-mode="light"]) .cert-field {
+  color: #ccc;
+}
+
+html:not([data-mode="light"]) .cert-section h3 {
+  color: #e6e6e6;
+}
+
+html:not([data-mode="light"]) .cert-section p,
+html:not([data-mode="light"]) .cert-content {
+  color: #d0d0d0;
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+
+html[data-mode="light"] .certification-article {
+  background: #fff;
+  /* border-color: #ddd; */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+
+html[data-mode="light"] .certification-title {
+  color: #222;
+}
+
+html[data-mode="light"] .cert-meta {
+  color: #666;
+}
+
+html[data-mode="light"] .cert-meta i {
+  color: #888;
+}
+
+html[data-mode="light"] .cert-field {
+  color: #333;
+}
+
+html[data-mode="light"] .cert-section h3 {
+  color: #222;
+}
+
+html[data-mode="light"] .cert-section p,
+html[data-mode="light"] .cert-content {
+  color: #333;
 }
 </style>

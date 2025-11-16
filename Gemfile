@@ -2,11 +2,7 @@
  
 source "https://rubygems.org"
 
-<<<<<<< Updated upstream
 # ruby "3.4.0"   
-=======
-# ruby "3.4.7"   
->>>>>>> Stashed changes
 
 # gem "eventmachine", "~> 1.2", require: false, platform: :ruby
 
